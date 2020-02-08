@@ -1,0 +1,14 @@
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      .InternetMango.
+    </a>
+
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <%= render "devise/sessions/sign_in" unless user_signed_in? %>
+      </ul>
+    </div>
+  </div>
+</nav>

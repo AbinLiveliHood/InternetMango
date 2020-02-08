@@ -1,0 +1,21 @@
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <div class="form-row align-items-center">
+    <div class="col-auto">
+      <%= f.label :email, class: "sr-only", for: "inlineFormInput" %>
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control mb-2 input-small", id: "inlineFormInput", placeholder: "Email" %>
+    </div>
+
+    <div class="col-auto">
+      <%= f.label :password, class: "sr-only", for: "inlineFormInputGroup" %>
+      <div class="input-group mb-2">
+        <div class="input-group-prepend">
+        </div>
+        <%= f.password_field :password, autocomplete: "current-password", class: "form-control input-small", id: "inlineFormInputGroup", placeholder: "Password" %>
+      </div>
+    </div>
+
+    <div class="col-auto">
+      <%= f.submit "Log in", class: "btn btn-primary mb-2 btn-sm" %>
+    </div>
+  </div>
+<% end %>
